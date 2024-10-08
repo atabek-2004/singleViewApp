@@ -29,12 +29,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         self.view.addSubview(tableView)
         
-        // Пример контактов
         contacts.append(Contact(name: "John Doe", phoneNumber: "123-456-7890"))
         contacts.append(Contact(name: "Jane Smith", phoneNumber: "098-765-4321"))
     }
     
-    // MARK: - UITableViewDataSource
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contacts.count
@@ -48,7 +47,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
